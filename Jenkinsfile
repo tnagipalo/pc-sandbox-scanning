@@ -55,10 +55,10 @@ pipeline {
                 exit
                 EOF
                 '''
+                }
             }
-           }
-          }
         }
+    }
         stage('Server Deploy') {
             steps {
                 withAWS(credentials: 'aws-cred', region: 'us-east-1') {
